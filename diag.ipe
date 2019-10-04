@@ -1,0 +1,425 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70107" creator="Ipe 7.1.7">
+<info created="D:20180117125336" modified="D:20180117125336"/>
+<ipestyle name="basic">
+<symbol name="arrow/arc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/farc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/ptarc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fptarc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="mark/circle(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</symbol>
+<symbol name="mark/disk(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+</path>
+</symbol>
+<symbol name="mark/fdisk(sfx)" transformations="translations">
+<group>
+<path fill="sym-fill">
+0.5 0 0 0.5 0 0 e
+</path>
+<path fill="sym-stroke" fillrule="eofill">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</group>
+</symbol>
+<symbol name="mark/box(sx)" transformations="translations">
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</symbol>
+<symbol name="mark/square(sx)" transformations="translations">
+<path fill="sym-stroke">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+</path>
+</symbol>
+<symbol name="mark/fsquare(sfx)" transformations="translations">
+<group>
+<path fill="sym-fill">
+-0.5 -0.5 m
+0.5 -0.5 l
+0.5 0.5 l
+-0.5 0.5 l
+h
+</path>
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="mark/cross(sx)" transformations="translations">
+<group>
+<path fill="sym-stroke">
+-0.43 -0.57 m
+0.57 0.43 l
+0.43 0.57 l
+-0.57 -0.43 l
+h
+</path>
+<path fill="sym-stroke">
+-0.43 0.57 m
+0.57 -0.43 l
+0.43 -0.57 l
+-0.57 0.43 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="arrow/fnormal(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/pointed(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fpointed(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/linear(spx)">
+<path stroke="sym-stroke" pen="sym-pen">
+-1 0.333 m
+0 0 l
+-1 -0.333 l
+</path>
+</symbol>
+<symbol name="arrow/fdouble(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/double(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<pen name="heavier" value="0.8"/>
+<pen name="fat" value="1.2"/>
+<pen name="ultrafat" value="2"/>
+<symbolsize name="large" value="5"/>
+<symbolsize name="small" value="2"/>
+<symbolsize name="tiny" value="1.1"/>
+<arrowsize name="large" value="10"/>
+<arrowsize name="small" value="5"/>
+<arrowsize name="tiny" value="3"/>
+<color name="red" value="1 0 0"/>
+<color name="green" value="0 1 0"/>
+<color name="blue" value="0 0 1"/>
+<color name="yellow" value="1 1 0"/>
+<color name="orange" value="1 0.647 0"/>
+<color name="gold" value="1 0.843 0"/>
+<color name="purple" value="0.627 0.125 0.941"/>
+<color name="gray" value="0.745"/>
+<color name="brown" value="0.647 0.165 0.165"/>
+<color name="navy" value="0 0 0.502"/>
+<color name="pink" value="1 0.753 0.796"/>
+<color name="seagreen" value="0.18 0.545 0.341"/>
+<color name="turquoise" value="0.251 0.878 0.816"/>
+<color name="violet" value="0.933 0.51 0.933"/>
+<color name="darkblue" value="0 0 0.545"/>
+<color name="darkcyan" value="0 0.545 0.545"/>
+<color name="darkgray" value="0.663"/>
+<color name="darkgreen" value="0 0.392 0"/>
+<color name="darkmagenta" value="0.545 0 0.545"/>
+<color name="darkorange" value="1 0.549 0"/>
+<color name="darkred" value="0.545 0 0"/>
+<color name="lightblue" value="0.678 0.847 0.902"/>
+<color name="lightcyan" value="0.878 1 1"/>
+<color name="lightgray" value="0.827"/>
+<color name="lightgreen" value="0.565 0.933 0.565"/>
+<color name="lightyellow" value="1 1 0.878"/>
+<dashstyle name="dashed" value="[4] 0"/>
+<dashstyle name="dotted" value="[1 3] 0"/>
+<dashstyle name="dash dotted" value="[4 2 1 2] 0"/>
+<dashstyle name="dash dot dotted" value="[4 2 1 2 1 2] 0"/>
+<textsize name="large" value="\large"/>
+<textsize name="Large" value="\Large"/>
+<textsize name="LARGE" value="\LARGE"/>
+<textsize name="huge" value="\huge"/>
+<textsize name="Huge" value="\Huge"/>
+<textsize name="small" value="\small"/>
+<textsize name="footnote" value="\footnotesize"/>
+<textsize name="tiny" value="\tiny"/>
+<textstyle name="center" begin="\begin{center}" end="\end{center}"/>
+<textstyle name="itemize" begin="\begin{itemize}" end="\end{itemize}"/>
+<textstyle name="item" begin="\begin{itemize}\item{}" end="\end{itemize}"/>
+<gridsize name="4 pts" value="4"/>
+<gridsize name="8 pts (~3 mm)" value="8"/>
+<gridsize name="16 pts (~6 mm)" value="16"/>
+<gridsize name="32 pts (~12 mm)" value="32"/>
+<gridsize name="10 pts (~3.5 mm)" value="10"/>
+<gridsize name="20 pts (~7 mm)" value="20"/>
+<gridsize name="14 pts (~5 mm)" value="14"/>
+<gridsize name="28 pts (~10 mm)" value="28"/>
+<gridsize name="56 pts (~20 mm)" value="56"/>
+<anglesize name="90 deg" value="90"/>
+<anglesize name="60 deg" value="60"/>
+<anglesize name="45 deg" value="45"/>
+<anglesize name="30 deg" value="30"/>
+<anglesize name="22.5 deg" value="22.5"/>
+<tiling name="falling" angle="-60" step="4" width="1"/>
+<tiling name="rising" angle="30" step="4" width="1"/>
+</ipestyle>
+<page>
+<layer name="alpha"/>
+<view layers="alpha" active="alpha"/>
+<path layer="alpha" matrix="1 0 0 1 -96 0" stroke="black" pen="heavier">
+128 784 m
+128 624 l
+384 624 l
+384 784 l
+h
+</path>
+<path matrix="0.7 0 0 1 -57.6 0" stroke="black">
+128 592 m
+128 560 l
+208 560 l
+208 592 l
+h
+</path>
+<text matrix="1 0 0 1 -30.7075 -15.459" transformations="translations" pos="72 588" stroke="black" type="label" width="37.415" height="6.918" depth="0" valign="baseline">Switches</text>
+<path matrix="1.2 0 0 1 38.4 0" stroke="black">
+128 592 m
+128 560 l
+208 560 l
+208 592 l
+h
+</path>
+<path matrix="0.4 0 0 1 44.8 0" stroke="black">
+128 592 m
+128 560 l
+208 560 l
+208 592 l
+h
+</path>
+<text matrix="1 0 0 1 29.5395 -15.044" transformations="translations" pos="72 588" stroke="black" type="label" width="20.921" height="6.088" depth="0" valign="baseline">\verb|BTNL|</text>
+<path matrix="0.4 0 0 1 84.8 0" stroke="black">
+128 592 m
+128 560 l
+208 560 l
+208 592 l
+h
+</path>
+<text matrix="1 0 0 1 69.5395 -15.044" transformations="translations" pos="72 588" stroke="black" type="label" width="20.921" height="6.088" depth="0" valign="baseline">\verb|BTNR|</text>
+<text matrix="1 0 0 1 125.534 -14.498" transformations="translations" pos="72 588" stroke="black" type="label" width="84.932" height="6.926" depth="1.93" valign="baseline">7-Segment Displays</text>
+<path matrix="1.33333 0 0 1 -133.333 -32" stroke="black">
+160 768 m
+160 736 l
+208 736 l
+208 768 l
+h
+</path>
+<text matrix="1 0 0 1 15.564 132.541" transformations="translations" pos="72 588" stroke="black" type="label" width="48.872" height="6.918" depth="0" valign="baseline">MicroBlaze</text>
+<path matrix="1.33333 0 0 1 -5.33333 -112" stroke="black">
+160 768 m
+160 736 l
+208 736 l
+208 768 l
+h
+</path>
+<text matrix="1 0 0 1 144.096 56.596" transformations="translations" pos="72 588" stroke="black" type="label" width="47.807" height="6.808" depth="0" valign="baseline">AXI GPIO</text>
+<path matrix="1 0 0 1 -96 0" stroke="black" pen="fat" arrow="normal/normal">
+336 624 m
+336 592 l
+</path>
+<text matrix="1 0 0 1 -104 0" transformations="translations" pos="348 612" stroke="black" type="label" width="49.648" height="3.741" depth="1.24" valign="baseline" size="tiny">Anode/Cathode
+</text>
+<text matrix="1 0 0 1 -91.612 -8" transformations="translations" pos="348 612" stroke="black" type="label" width="24.872" height="3.459" depth="0" valign="baseline" size="tiny">Control
+</text>
+<path matrix="1 0 0 1 -96 0" stroke="black">
+160 656 m
+160 624 l
+240 624 l
+240 656 l
+h
+</path>
+<text matrix="1 0 0 1 8.242 56.596" transformations="translations" pos="72 588" stroke="black" type="label" width="47.516" height="6.808" depth="0" valign="baseline">Custom IP</text>
+<path matrix="1 0 0 1 -96 0" stroke="black" arrow="normal/normal">
+208 592 m
+208 624 l
+</path>
+<path matrix="1 0 0 1 -96 0" stroke="black" pen="fat" arrow="normal/normal">
+156 592 m
+156 608 l
+180 608 l
+180 624 l
+</path>
+<path matrix="1 0 0 1 -96 0" stroke="black" arrow="normal/normal">
+248 592 m
+248 608 l
+224 608 l
+224 624 l
+</path>
+<text matrix="1 0 0 1 -304 -12" transformations="translations" pos="348 612" stroke="black" type="label" width="9.133" height="3.21" depth="0" valign="baseline" size="tiny">16
+</text>
+<path matrix="1 0 0 1 -96 4" stroke="black" pen="fat">
+152 596 m
+160 600 l
+</path>
+<path matrix="1 0 0 1 -96 -8" stroke="black" pen="ultrafat">
+160 688 m
+368 688 l
+</path>
+<path matrix="1.33333 0 0 0.666667 -213.333 234.667" stroke="black">
+304 752 m
+304 704 l
+352 704 l
+352 752 l
+h
+</path>
+<text matrix="1 0 0 1 124.174 132.541" transformations="translations" pos="72 588" stroke="black" type="label" width="55.653" height="6.918" depth="0" valign="baseline">EthernetLite</text>
+<path matrix="1 0 0 0.75 -96 164" stroke="black" pen="fat">
+200 656 m
+200 688 l
+</path>
+<path matrix="1 0 0 0.857143 -96 90.2857" stroke="black" pen="fat">
+208 716 m
+208 688 l
+</path>
+<path matrix="1 0 0 1 -96 -8" stroke="black" pen="fat">
+320 712 m
+320 688 l
+</path>
+<path matrix="1 0 0 0.6 -96 267.2" stroke="black" pen="fat">
+336 648 m
+336 688 l
+</path>
+<path matrix="1.33333 0 0 0.666667 -213.333 282.667" stroke="black">
+304 752 m
+304 704 l
+352 704 l
+352 752 l
+h
+</path>
+<path matrix="1 0 0 0.666667 -96 277.333" stroke="black" pen="fat">
+320 712 m
+320 688 l
+</path>
+<text matrix="1 0 0 1 123.98 176.596" transformations="translations" pos="72 588" stroke="black" type="label" width="56.04" height="6.808" depth="0" valign="baseline">MII-to-RMII</text>
+<text matrix="1 0 0 1 240.299 176.541" transformations="translations" pos="72 588" stroke="black" type="label" width="63.401" height="6.918" depth="0" valign="baseline">Ethernet PHY</text>
+<text matrix="1 0 0 1 -79.612 150.307" transformations="translations" pos="348 612" stroke="black" type="label" width="18.203" height="3.386" depth="0" valign="baseline" size="tiny">RMII
+</text>
+<text matrix="1 0 0 1 -119.612 130.307" transformations="translations" pos="348 612" stroke="black" type="label" width="13.374" height="3.386" depth="0" valign="baseline" size="tiny">MII
+</text>
+<text matrix="1 0 0 1 -36.436 184.541" transformations="translations" pos="72 588" stroke="black" type="label" width="25.322" height="6.918" depth="0" valign="baseline">\textsf{FPGA}</text>
+<text matrix="1 0 0 1 67.564 80.541" transformations="translations" pos="72 588" stroke="black" type="label" width="65.608" height="6.227" depth="0" valign="baseline" size="small">\textsf{AXI Interconnect}</text>
+<text matrix="1 0 0 1 13.194 48.596" transformations="translations" pos="72 588" stroke="black" type="label" width="37.612" height="5.535" depth="0" valign="baseline" size="footnote">AXI Slave</text>
+<text matrix="1 0 0 1 149.194 48.596" transformations="translations" pos="72 588" stroke="black" type="label" width="37.612" height="5.535" depth="0" valign="baseline" size="footnote">AXI Slave</text>
+<text matrix="1 0 0 1 133.194 124.596" transformations="translations" pos="72 588" stroke="black" type="label" width="37.612" height="5.535" depth="0" valign="baseline" size="footnote">AXI Slave</text>
+<text matrix="1 0 0 1 17.878 124.596" transformations="translations" pos="72 588" stroke="black" type="label" width="44.244" height="5.446" depth="0" valign="baseline" size="footnote">AXI Master</text>
+<path matrix="1 0 0 1 176 192" stroke="black">
+128 592 m
+128 560 l
+208 560 l
+208 592 l
+h
+</path>
+<path matrix="0.315789 0 0 1 300.632 -48" stroke="black" pen="ultrafat">
+264 816 m
+416 816 l
+</path>
+<text matrix="1 0 0 1 319.476 184.541" transformations="translations" pos="72 588" stroke="black" type="label" width="33.049" height="6.227" depth="0" valign="baseline" size="small">\textsf{Ethernet}</text>
+<path matrix="1.09091 0 0 1 -23.2727 0" stroke="black" pen="fat">
+256 768 m
+300 768 l
+</path>
+<path matrix="1 0 0 1 304 192" stroke="black" fill="lightgray" pen="heavier">
+128 592 m
+128 560 l
+208 560 l
+208 592 l
+h
+</path>
+<group matrix="1 0 0 1 0 -2.965">
+<text matrix="1 0 0 1 378.124 185.557" transformations="translations" pos="72 588" stroke="black" type="label" width="43.753" height="6.815" depth="1.93" valign="baseline">Computer</text>
+<text matrix="1 0 0 1 386.412 173.557" transformations="translations" pos="72 588" stroke="black" type="label" width="27.176" height="6.808" depth="0" valign="baseline">Server</text>
+</group>
+</page>
+</ipe>
