@@ -18,8 +18,8 @@ sorting=none
 \addbibresource{assign.bib}
 
 \title{ECE532S Digital Systems Design \\ \vspace{0.4cm}
-       \Large Lab Test 2 Description - Group Demo Project \\ \vspace{0.4cm}
-       \small Last Updated: July, 2019}
+       \Large Warmup Demo Project \\ \vspace{0.4cm}
+       \small Last Updated: Jan 2020}
 \author{ }
 \date{ }
 
@@ -27,9 +27,10 @@ sorting=none
 \maketitle
 \vspace{-1cm}
 
-The purpose of this test project/demo is to understand and integrate some of the components that you will require in your projects. You will learn to connect your Nexys board to an Ethernet network, construct and integrate an IP as well as perform on-chip hardware debugging. In advance of your demonstration in the lab, you should have all of the functionality described below complete and ready to demonstrate. This project is explicitly structured as a group project, you should work on it together.
+The purpose of this demo is to understand and integrate some of the components that you will require in your projects. You will learn to connect your Nexys board to an Ethernet network, construct and integrate an IP as well as perform on-chip hardware debugging. In advance of your demonstration in the lab, you should have all of the functionality described below complete and ready to demonstrate. This project is explicitly structured as a group project, you should work on it together.
 
-This is worth XX\% of your final grade. If you do not have the project prepared in advance of your demonstration period, you will be assigned a grade of 0\%. Please ensure that you have signed up for a demo slot or that a TA has informed you of when you are expected to present.
+%This is worth XX\% of your final grade. 
+The completed demo is due at the beginning of your demonstration period in the lab. If you do not have the demo prepared in advance of your demonstration period, you will be assigned a grade of 0\%. Please ensure that you have signed up for a demo slot or that a TA has informed you of when you are expected to present.
 
 
 
@@ -44,8 +45,8 @@ The constructed system will have several major components (DDR memory interface,
 Note that the tutorial implements a server, while you will have to implement a TCP client for this project.
 For more information on LwIP, consult the \href{http://lwip.wikia.com/wiki/LwIP_Wiki}{\color{blue}Wiki}, especially the section on the \href{http://lwip.wikia.com/wiki/Raw/TCP}{\color{blue}RAW API} used in the tutorial.
 
-The second new feature that you will make use of in this assignment is the hardware debugger.
-\href{https://www.xilinx.com/support/documentation/ip_documentation/ila/v6_2/pg172-ila.pdf}{\color{blue}Chipscope ILA}. A tutorial of an example can be found in \href{https://www.xilinx.com/support/documentation/sw_manuals/xilinx2017_2/ug936-vivado-tutorial-programming-debugging.pdf}{\color{blue}Debugging Tutorial}. Lab 1, 2 and 9 refer to three different ways to add chipscope to your design (append the netlist, add to verilog or add the ILA ip in your design). Finally, for more general information on the board, refer to the Nexys 4 DDR \href{https://reference.digilentinc.com/reference/programmable-logic/nexys-4-ddr/reference-manual}{\color{blue}reference manual}.
+A second new feature that you will make use of in this assignment is the hardware debugger.
+\href{https://www.xilinx.com/support/documentation/ip_documentation/ila/v6_2/pg172-ila.pdf}{\color{blue}Chipscope ILA}. A tutorial of an example can be found in \href{https://www.xilinx.com/support/documentation/sw_manuals/xilinx2017_2/ug936-vivado-tutorial-programming-debugging.pdf}{\color{blue}Debugging Tutorial}. Lab 1, 2 and 9 refer to three different ways to add chipscope to your design (append the netlist, add to verilog or add the ILA ip in your design). Note, the ILA was also covered in the course tutorials themselves. Finally, for more general information on the board, refer to the Nexys 4 DDR \href{https://reference.digilentinc.com/reference/programmable-logic/nexys-4-ddr/reference-manual}{\color{blue}reference manual}.
 
 
 
@@ -54,26 +55,26 @@ The second new feature that you will make use of in this assignment is the hardw
 \section{What to Do}
 \label{sec:instr}
 As a group, you are to construct an FPGA hardware system that acts as a network TCP/IP client to a computer server.
-Within your hardware system you must include a custom AXI Lite IP component that reads the board switches and buttons, and performs some basic manipulation on these input values.
-
-The system as a whole is reactive to two of the buttons on the Nexys 4 DDR board, and performs its operation in two phases.
+Within your hardware system you must include a custom AXI Lite IP component that reads the board switches and buttons, and performs some basic manipulation on these input values. 
+The system as a whole is reactive to two of the buttons on the Nexys 4 DDR board, and performs two major operations.
 \\
 \\
 
 \begin{itemize}
-\item Phase 1
+\item Operation 1
 \begin{itemize}
-\item A \emph{transmission} operation is started when \verb|BTNL| is first pressed on the board.
-\item Once the button is pressed, the 16 switch values are read and stored as the lower two bytes of a 4-byte word.
-\item When \verb|BTNL| is pressed a second time, the value corresponding to the position of the 16 switches on the board is read again and stored as the upper two bytes of the word.
-\item Once the 4 bytes that form a word have been received, their value will be inverted by the module. For example, \(01010101010101010000000000000000 \Rightarrow 10101010101010101111111111111111\) 
-\item At this stage, your custom IP should signal to the MicroBlaze that a new valid word is ready.
-\item The software running on this soft processor will read the full word, establish a TCP/IP connection to the computer server and send the word over the Ethernet network.
+\item A \emph{transmission} operation is started based on presses of the \verb|BTNL| button on the board.
+\item This operation is facilitated by a custom AXI-Lite IP you are to design.
+\item The first time the button is pressed, the 16 switch values are read and stored as the lower two bytes of a 4-byte word register. (Hint, a button press corresponds to a pressing and releasing of the button).
+\item When the \verb|BTNL| button is pressed a second time, the 16 switch values are read again and stored as the upper two bytes of the 4-byte word register.
+\item At this stage, your custom IP should signal to the MicroBlaze that a new valid word is ready. There are two ways you could implement such a signal; using an interrupt line from your custom IP; or using an AXI-Lite register that the MicroBlaze polls until it sees the ready signal. Note, in either case don't forget to implement functionality to reset the ready signal.
+\item The software running on this soft processor will read the full word, establish a TCP/IP connection to the computer server and send the word over the Ethernet network as a \textit{POST} message.
 \end{itemize}
-\item Phase 2
+\item Operation 2
 \begin{itemize}
 \item A \emph{receive} operation is started when \verb|BTNR| is pressed.
-\item Now the MicroBlaze will connect to the computer server and read the current 4-byte word.
+\item This operation is facilitated by a Xilinx provided AXI GPIO IP Core. Note, the Microblaze software could poll this core for a press of the \verb|BTNR| button.
+\item Now the MicroBlaze will connect to the computer server and read the current 4-byte word using a \textit{GET} message.
 \item The retrieved word will be then shown on the 7-segment displays, in hexadecimal.
 \end{itemize}
 
@@ -84,8 +85,8 @@ Supporting IPs have been left out of the diagram for clarity.
 
 \begin{figure}[!b]
 \centering
-\includegraphics{diag.eps}
-\caption{Block diagram of the main system in the warmup project. Red circles indicate hardware probe points explained in Sec.~\ref{sec:wtd:hwdbg}}
+\includegraphics[scale=0.855]{diag.eps}
+\caption{Block diagram of the project. Red circles indicate probe points explained in Sec.~\ref{sec:wtd:hwdbg}}
 \label{fig:blockdiag}
 \end{figure}
 
